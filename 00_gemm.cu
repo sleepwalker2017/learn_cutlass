@@ -12,7 +12,7 @@ int main() {
     cutlass::half_t,                           // ElementA
     cutlass::layout::RowMajor,              // LayoutA
     cutlass::half_t,                           // ElementB
-    cutlass::layout::RowMajor,              // LayoutB
+    cutlass::layout::ColumnMajor,              // LayoutB
     cutlass::half_t,                           // ElementOutput
     cutlass::layout::RowMajor,              // LayoutOutput
     float,                                     // ElementAccumulator
@@ -26,9 +26,9 @@ int main() {
   //
   // Define the problem size
   //
-  int M = 16;
-  int N = 16;
-  int K = 16;
+  int M = 4 * 1024;
+  int N = 4 * 1024;
+  int K = 4 * 1024;
 
   float alpha = 1.f;
   float beta = 0.f;
@@ -38,17 +38,17 @@ int main() {
   //
 
   cutlass::HostTensor<cutlass::half_t, cutlass::layout::RowMajor> A({M, K});
-  cutlass::HostTensor<cutlass::half_t, cutlass::layout::RowMajor> B({K, N});
+  cutlass::HostTensor<cutlass::half_t, cutlass::layout::ColumnMajor> B({K, N});
   cutlass::HostTensor<cutlass::half_t, cutlass::layout::RowMajor> C({M, N});
 
   for (int i = 0; i < M; ++i) {
     for (int j = 0; j < K; ++j) {
-      A.host_ref().at({i, j}) = (i * K + j) % 5;
+      A.host_ref().at({i, j}) = ((i * K + j) % 5 - 8)/100.0;
     } 
   }
   for (int i = 0; i < K; ++i) {
     for (int j = 0; j < N; ++j) {
-      B.host_ref().at({i, j}) = (i * N + j) % 5 + (i * N + j) % 4;
+      B.host_ref().at({i, j}) = ((i * N + j) % 5 - 8)/100.0;
     } 
   }
   for (int i = 0; i < M; ++i) {
@@ -89,10 +89,11 @@ int main() {
 
   C.sync_host();
   for (int i = 0; i < M; ++i) {
-    for (int j = 0; j < N; ++j) {
+    for (int j = 0; j < N && j < 16; ++j) {
       std::cout << C.host_ref().at({i, j}) << "\t";
     } 
     std::cout << std::endl;
+    break;
   }
 
   return 0;

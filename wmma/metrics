@@ -1,0 +1,31 @@
+smsp__sass_inst_executed_op_memory_8b.sum
+ -smsp__sass_inst_executed_op_memory_8b.sum
+smsp__sass_inst_executed_op_memory_64b.sum
+ -smsp__sass_inst_executed_op_memory_64b.sum
+smsp__sass_inst_executed_op_memory_32b.sum
+ -smsp__sass_inst_executed_op_memory_32b.sum
+smsp__sass_inst_executed_op_memory_16b.sum
+ -smsp__sass_inst_executed_op_memory_16b.sum
+smsp__sass_inst_executed_op_memory_128b.sum
+ -smsp__sass_inst_executed_op_memory_128b.sum
+lts__t_sectors_op_write.sum.pct_of_peak_sustained_elapsed
+ -lts__t_sectors_op_write.sum.pct_of_peak_sustained_elapsed
+lts__t_sectors_op_read.sum.pct_of_peak_sustained_elapsed
+ -lts__t_sectors_op_read.sum.pct_of_peak_sustained_elapsed
+l1tex__t_sectors.sum.pct_of_peak_sustained_elapsed
+ -l1tex__t_sectors.sum.pct_of_peak_sustained_elapsed
+l1tex__cycles_elapsed.sum
+ -l1tex__cycles_elapsed.sum
+l1tex__cycles_active.sum
+ -l1tex__cycles_active.sum
+group:memory__shared_table
+ -group:memory__shared_table
+group:memory__l2_cache_table
+ -group:memory__l2_cache_table
+group:memory__first_level_cache_table
+ -group:memory__first_level_cache_table
+group:memory__dram_table
+ -group:memory__dram_table
+group:memory__l2_cache_evict_policy_table
+ -arch:89:90:group:memory__l2_cache_evict_policy_table
+ -arch:80:86:group:memory__l2_cache_evict_policy_table

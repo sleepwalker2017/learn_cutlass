@@ -1,0 +1,86 @@
+sm__warps_active.avg.per_cycle_active
+ -sm__warps_active.avg.per_cycle_active
+sm__warps_active.avg.pct_of_peak_sustained_active
+ -sm__warps_active.avg.pct_of_peak_sustained_active
+sm__throughput.avg.pct_of_peak_sustained_elapsed
+ -sm__throughput.avg.pct_of_peak_sustained_elapsed
+sm__maximum_warps_per_active_cycle_pct
+ -sm__maximum_warps_per_active_cycle_pct
+sm__maximum_warps_avg_per_active_cycle
+ -sm__maximum_warps_avg_per_active_cycle
+sm__cycles_active.avg
+ -sm__cycles_active.avg
+lts__throughput.avg.pct_of_peak_sustained_elapsed
+ -lts__throughput.avg.pct_of_peak_sustained_elapsed
+launch__waves_per_multiprocessor
+ -launch__waves_per_multiprocessor
+launch__thread_count
+ -launch__thread_count
+launch__shared_mem_per_block_static
+ -launch__shared_mem_per_block_static
+launch__shared_mem_per_block_dynamic
+ -launch__shared_mem_per_block_dynamic
+launch__shared_mem_per_block_driver
+ -launch__shared_mem_per_block_driver
+launch__shared_mem_per_block
+ -launch__shared_mem_per_block
+launch__shared_mem_config_size
+ -launch__shared_mem_config_size
+launch__registers_per_thread
+ -launch__registers_per_thread
+launch__occupancy_per_shared_mem_size
+ -launch__occupancy_per_shared_mem_size
+launch__occupancy_per_register_count
+ -launch__occupancy_per_register_count
+launch__occupancy_per_block_size
+ -launch__occupancy_per_block_size
+launch__occupancy_limit_warps
+ -launch__occupancy_limit_warps
+launch__occupancy_limit_shared_mem
+ -launch__occupancy_limit_shared_mem
+launch__occupancy_limit_registers
+ -launch__occupancy_limit_registers
+launch__occupancy_limit_blocks
+ -launch__occupancy_limit_blocks
+launch__grid_size
+ -launch__grid_size
+launch__func_cache_config
+ -launch__func_cache_config
+launch__block_size
+ -launch__block_size
+l1tex__throughput.avg.pct_of_peak_sustained_active
+ -l1tex__throughput.avg.pct_of_peak_sustained_active
+gpu__time_duration.sum
+ -gpu__time_duration.sum
+gpu__compute_memory_throughput.avg.pct_of_peak_sustained_elapsed
+ -gpu__compute_memory_throughput.avg.pct_of_peak_sustained_elapsed
+gpc__cycles_elapsed.max
+ -gpc__cycles_elapsed.max
+gpc__cycles_elapsed.avg.per_second
+ -gpc__cycles_elapsed.avg.per_second
+breakdown:sm__throughput.avg.pct_of_peak_sustained_elapsed
+ -breakdown:sm__throughput.avg.pct_of_peak_sustained_elapsed
+breakdown:gpu__compute_memory_throughput.avg.pct_of_peak_sustained_elapsed
+ -breakdown:gpu__compute_memory_throughput.avg.pct_of_peak_sustained_elapsed
+launch__occupancy_per_cluster_size
+ -arch:90:90:launch__occupancy_per_cluster_size
+launch__occupancy_cluster_pct
+ -arch:90:90:launch__occupancy_cluster_pct
+launch__occupancy_cluster_gpu_pct
+ -arch:90:90:launch__occupancy_cluster_gpu_pct
+launch__cluster_size
+ -arch:90:90:launch__cluster_size
+launch__cluster_scheduling_policy
+ -arch:90:90:launch__cluster_scheduling_policy
+launch__cluster_max_potential_size
+ -arch:90:90:launch__cluster_max_potential_size
+launch__cluster_max_active
+ -arch:90:90:launch__cluster_max_active
+gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed
+ -arch:89:90:gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed
+ -arch:75:86:gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed
+ -arch:50:70:gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed
+dram__cycles_elapsed.avg.per_second
+ -arch:89:90:dram__cycles_elapsed.avg.per_second
+ -arch:75:86:dram__cycles_elapsed.avg.per_second
+ -arch:50:70:dram__cycles_elapsed.avg.per_second
